@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakhman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/28 15:35:27 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/11/28 19:33:15 by mrakhman         ###   ########.fr       */
+/*   Created: 2017/11/28 19:23:29 by mrakhman          #+#    #+#             */
+/*   Updated: 2017/11/28 19:23:41 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_isalpha(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
+	if (str[i] == '\0')
+		return (1);
 	while (str[i] != '\0')
 	{
+		if ((str[i] < 'A' || str[i] > 'Z') && (str[i] < 'a' || str[i] > 'z'))
+			return (0);
 		i++;
 	}
-	return (i);
+	return (1);
 }
