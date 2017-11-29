@@ -6,7 +6,7 @@
 /*   By: mrakhman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 19:47:27 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/11/29 19:57:17 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/11/29 20:28:58 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	main(void)
 	int	b;
 	int	c;
 
-	a = 0;
+	a = 127;
 	b = 76;
-	c = 239;
-	printf("%d, %d, %d\n", isascii(a), isascii(b), isascii(c));
+	c = 177;
 	printf("%d, %d, %d\n", ft_isascii(a), ft_isascii(b), ft_isascii(c));
+	printf("%d, %d, %d\n", isascii(a), isascii(b), isascii(c));
 	return (0);
 }
