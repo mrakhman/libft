@@ -6,22 +6,13 @@
 /*   By: mrakhman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 19:23:29 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/11/28 19:23:41 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/11/29 18:21:14 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(char c)
 {
-	int	i;
-
-	i = 0;
-	if (str[i] == '\0')
-		return (1);
-	while (str[i] != '\0')
-	{
-		if ((str[i] < 'A' || str[i] > 'Z') && (str[i] < 'a' || str[i] > 'z'))
-			return (0);
-		i++;
-	}
+	if ((c < 'A' || c > 'Z') && (c < 'a' || c > 'z'))
+		return (0);
 	return (1);
 }
