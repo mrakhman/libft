@@ -6,7 +6,7 @@
 /*   By: mrakhman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 15:46:22 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/11/29 20:39:00 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/11/29 22:06:45 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
-
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 #endif
