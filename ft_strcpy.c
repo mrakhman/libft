@@ -6,20 +6,20 @@
 /*   By: mrakhman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:04:15 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/11/28 16:07:34 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/11/30 18:00:51 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int i;
 
 	i = 0;
 	while (src[i])
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = src[i];
-	return (dest);
+	dst[i] = src[i];
+	return (dst);
 }

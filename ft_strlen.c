@@ -6,16 +6,18 @@
 /*   By: mrakhman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 15:35:27 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/11/28 19:33:15 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/11/30 17:52:01 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}

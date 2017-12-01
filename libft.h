@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrakhman <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 15:46:22 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/11/29 22:06:45 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/11/30 21:02:07 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <string.h>
-int		ft_strlen(char *str);
-int		ft_atoi(char *str);
-char	*ft_strcpy(char *dest, char *src);
-char	*ft_strncpy(char *dest, char *src, unsigned int n);
-char	*ft_strstr(char *str, char *to_find);
-int		ft_strcmp(char *s1, char *s2);
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
+# include <unistd.h>
+size_t	ft_strlen(const char *s);
+int		ft_atoi(const char *str);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
+char	*ft_strstr(const char *haystack, const char *needle);
+int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_isalpha(char c);
-char	*ft_strdup(char *src);
-char	*ft_strnstr(const char *str, const char *to_find, size_t len);
+char	*ft_strdup(const char *s1);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -31,4 +31,5 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 #endif
