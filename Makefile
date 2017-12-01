@@ -6,7 +6,7 @@
 #    By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/30 19:03:50 by mrakhman          #+#    #+#              #
-#    Updated: 2017/11/30 20:23:27 by mrakhman         ###   ########.fr        #
+#    Updated: 2017/12/01 17:27:05 by mrakhman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,11 @@ ft_isalnum \
 ft_isprint \
 ft_toupper \
 ft_tolower \
+ft_strnstr \
+ft_memset \
+ft_bzero \
+ft_memcpy \
+ft_memccpy \
 
 
 
