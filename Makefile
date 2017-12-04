@@ -6,7 +6,7 @@
 #    By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/30 19:03:50 by mrakhman          #+#    #+#              #
-#    Updated: 2017/12/04 17:42:03 by mrakhman         ###   ########.fr        #
+#    Updated: 2017/12/04 21:41:12 by mrakhman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,16 @@ ft_strncat \
 ft_strlcat \
 ft_strchr \
 ft_strrchr \
+ft_putchar \
+ft_putstr \
+ft_putnbr \
+ft_memalloc \
+ft_memdel \
+ft_strnew \
+ft_strdel \
+ft_strclr \
+ft_striter \
+
 
 FLAGS = -Wall -Wextra -Werror -I.
 
@@ -51,6 +61,7 @@ all: $(NAME)
 $(NAME):
 	gcc -c $(FLAGS) $(addsuffix .c,$(FUNCTIONS))
 	ar rc $(NAME) $(OBJECTS)
+	ranlib $(NAME)
 
 clean:
 	/bin/rm -f $(OBJECTS)
