@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 15:46:22 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/02 21:32:22 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/04 17:39:08 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 
 #endif

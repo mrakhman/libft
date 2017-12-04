@@ -6,7 +6,7 @@
 #    By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/30 19:03:50 by mrakhman          #+#    #+#              #
-#    Updated: 2017/12/02 21:32:21 by mrakhman         ###   ########.fr        #
+#    Updated: 2017/12/04 17:42:03 by mrakhman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,9 @@ ft_memchr \
 ft_memcmp \
 ft_strcat \
 ft_strncat \
-
+ft_strlcat \
+ft_strchr \
+ft_strrchr \
 
 FLAGS = -Wall -Wextra -Werror -I.
 
