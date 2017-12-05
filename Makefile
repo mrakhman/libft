@@ -6,7 +6,7 @@
 #    By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/30 19:03:50 by mrakhman          #+#    #+#              #
-#    Updated: 2017/12/04 21:41:12 by mrakhman         ###   ########.fr        #
+#    Updated: 2017/12/05 20:57:20 by mrakhman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,11 @@ ft_strnew \
 ft_strdel \
 ft_strclr \
 ft_striter \
-
+ft_striteri \
+ft_strmap \
+ft_strmapi \
+ft_strequ \
+ft_strnequ \
 
 FLAGS = -Wall -Wextra -Werror -I.
 
