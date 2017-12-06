@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 19:24:36 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/05 20:57:21 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/06 20:55:53 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,9 +149,38 @@ printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strequ]-");
 printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strnequ]-");
 	printf("\x1B[32mStrings are equal:\x1B[37m %d\n", ft_strnequ("helloO", "helloA", 5));
 	printf("\x1B[32mStrings are not equal:\x1B[37m %d\n", ft_strnequ("helloO", "helloA", 6));
+
+
+printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strsub]-");
+	printf("\x1B[32mOriginal string:\x1B[37m %s\n", "How are you doing?");
+	printf("\x1B[32mSubstring fails:\x1B[37m %s\n", ft_strsub("", 0, 0));
+	printf("\x1B[32mSubstring is:\x1B[37m %s\n", ft_strsub("How are you doing?", 4, 9));
+	printf("\x1B[32mSubstring fails:\x1B[37m %s\n", ft_strsub("How are you doing?", 35, 4));
+
+
+printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strjoin]-");
+	printf("\x1B[32mString 1:\x1B[37m %s\t \x1B[32mString 2:\x1B[37m %s\n", "01234", "56789");
+	printf("\x1B[32mConcatenated strings:\x1B[37m %s\n", ft_strjoin("01234", "56789"));
+	printf("\x1B[32mConcatenated strings:\x1B[37m %s\n", ft_strjoin("", ""));
+
+
+printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strtrim]-");
+	printf("\x1B[32mString:\x1B[37m%s\n", "\"\\t_\\nHello I'm\\ta string\\n_\"");
+	printf("\x1B[32mWithout whitespaces:\x1B[37m%s\n", ft_strtrim("\t \nHello I'm\ta string!\n "));
 */
 
+printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strsplit]-");
+	int ii = 0;
+	char **split;
+	char str[] = "*hello*fellow***students*";
+	split = ft_strsplit(str, '*');
+	while (split[ii])
+	{
+		printf("%s\n", split[ii]);
+		ii++;
+	}
 
 	
+
 	return (0);
 }
