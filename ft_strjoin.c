@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/05 19:58:15 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/06 18:32:04 by mrakhman         ###   ########.fr       */
+/*   Created: 2017/12/06 16:04:14 by mrakhman          #+#    #+#             */
+/*   Updated: 2017/12/06 18:28:20 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int	i;
-	char			*tab;
+	char	*tab;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
-	tab = ft_strnew(ft_strlen(s));
+	j = 0;
+	k = 0;
+	tab = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!tab)
 		return (NULL);
-	while (s[i] != '\0')
+	while (s1[i] != '\0')
 	{
-		tab[i] = f(i, s[i]);
+		tab[k] = s1[i];
+		k++;
 		i++;
 	}
-	tab[i] = '\0';
+	while (s2[j] != '\0')
+	{
+		tab[k] = s2[j];
+		k++;
+		j++;
+	}
+	tab[k] = '\0';
 	return (tab);
 }

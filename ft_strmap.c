@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 19:30:15 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/05 20:12:09 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/06 18:32:15 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	i = 0;
 	tab = ft_strnew(ft_strlen(s));
+	if (!tab)
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		tab[i] = f(s[i]);

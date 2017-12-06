@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/05 19:58:15 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/06 18:32:04 by mrakhman         ###   ########.fr       */
+/*   Created: 2017/12/06 15:28:59 by mrakhman          #+#    #+#             */
+/*   Updated: 2017/12/06 18:29:23 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
+	unsigned int	j;
 	char			*tab;
 
 	i = 0;
-	tab = ft_strnew(ft_strlen(s));
+	j = 0;
+	tab = (char *)malloc(len + 1);
 	if (!tab)
 		return (NULL);
-	while (s[i] != '\0')
+	if (!s)
+		return (NULL);
+	while (s[i] != '\0' && i < start)
 	{
-		tab[i] = f(i, s[i]);
 		i++;
+		if (i == start)
+		{
+			while (j < len)
+				tab[j++] = s[i++];
+		}
 	}
-	tab[i] = '\0';
+	tab[j] = '\0';
 	return (tab);
 }
