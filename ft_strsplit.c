@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 19:08:44 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/06 21:08:05 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/07 12:59:38 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,29 +43,30 @@ static size_t	word_len(char const *s, char c, int i)
 	return (len_w);
 }
 
-char 	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	size_t	k;
-	size_t	i; //words
-	size_t	j; //letters
+	size_t	i;
+	size_t	j;
 	char	**tab;
 
 	k = 0;
 	i = 0;
 	tab = (char **)malloc(sizeof(char*) * word_nb(s, c) + 1);
+	if (!tab)
+		return (NULL);
 	while (s[k])
 	{
 		while (s[k] && s[k] == c)
 			k++;
-		if (*s)
-		{
-			tab[i] = (char *)malloc(sizeof(char) * (word_len(s, c, k) + 1));
-			j = 0;
-			while (s[k] && s[k] != c)
-				tab[i][j++] = s[k++];
-			tab[i][j] = '\0';
-			i++;
-		}
+		tab[i] = (char *)malloc(sizeof(char) * (word_len(s, c, k) + 1));
+		if (!tab)
+			return (NULL);
+		j = 0;
+		while (s[k] && s[k] != c)
+			tab[i][j++] = s[k++];
+		tab[i][j] = '\0';
+		i++;
 	}
 	tab[i] = NULL;
 	return (tab);

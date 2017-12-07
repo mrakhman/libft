@@ -6,7 +6,7 @@
 #    By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/30 19:03:50 by mrakhman          #+#    #+#              #
-#    Updated: 2017/12/06 19:41:56 by mrakhman         ###   ########.fr        #
+#    Updated: 2017/12/07 15:56:32 by mrakhman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,8 +57,14 @@ ft_strequ \
 ft_strnequ \
 ft_strsub \
 ft_strjoin \
-t_strtrim \
+ft_strtrim \
 ft_strsplit \
+ft_itoa \
+ft_putendl \
+ft_putchar_fd \
+ft_putstr_fd \
+ft_putendl_fd \
+ft_putnbr_fd \
 
 FLAGS = -Wall -Wextra -Werror -I.
 

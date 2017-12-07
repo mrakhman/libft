@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/04 18:01:03 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/07 15:24:49 by mrakhman         ###   ########.fr       */
+/*   Created: 2017/12/07 15:35:06 by mrakhman          #+#    #+#             */
+/*   Updated: 2017/12/07 15:46:46 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	ft_putstr_fd(char const *s, int fd)
 {
 	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
 	{
-		ft_putchar(s[i]);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }
