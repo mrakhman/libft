@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 19:24:36 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/06 20:55:53 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/07 16:06:48 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,78 +17,78 @@
 
 /*
  * test function for ft_striter
- *
+ */
 static void test_ft_striter(char *c)
 {
 	*c = *c + 1;
 }
 
-*
+/*
  * test function for ft_striteri
- *
+ */
 static void	test_ft_striteri(unsigned int i, char *c)
 {
 	*c = *c + i;
 }
 
-*
+/*
  * test function for ft_strmap
- *
+ */
 
 static char	test_ft_strmap(char c)
 {
 	return (c + 1);
 }
 
-*
+/*
  * test function for ft_strmapi
- *
+ */
 
 static char	test_ft_strmapi(unsigned int i, char c)
 {
 	return (c + i);
 }
 
- */
+
 
 
 
 int	main(void)
 {
-
-/*
-printf("\n\x1B[32m%s\x1B[37m\n", "-[ft_putchar]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_putchar]-");
 	ft_putchar('p');
+	printf("\n");
 
 
-printf("\n\x1B[32m%s\x1B[37m\n", "-[ft_putstr]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_putstr]-");
 	ft_putstr("Hello, everyone!");
+	printf("\n");
 
 
-printf("\n\x1B[32m%s\x1B[37m\n", "-[ft_putnbr]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_putnbr]-");
 	ft_putnbr(-120);
+	printf("\n");
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_memalloc]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_memalloc]-");
 	printf("\x1B[32mAllocate:\x1B[37m %p\n", ft_memalloc(120));
 	printf("\n\x1B[32mFail to allocate:\x1B[37m %p\n\n", ft_memalloc(-120));
 	printf("\n\x1B[32mToo much to allocate:\x1B[37m %p\n", ft_memalloc(1200000000000000000));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_memdel]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_memdel]-");
 	void	*ap;
 	ap = ft_memalloc(2000);
 	printf("\x1B[32mAllocate:\x1B[37m %p\n", ap);
 	ft_memdel(&ap);
 	printf("\x1B[32mFree:\x1B[37m %p\n", (ap));
 
-
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strnew]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strnew]-");
 	printf("\x1B[32mAllocate:\x1B[37m %p\n", ft_strnew(120));
 	printf("\x1B[32mFail to allocate:\x1B[37m %p\n", ft_strnew(-120));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strdel]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strdel]-");
 	char	*as;
 	as = ft_strnew(200);
 	printf("\x1B[32mAllocate:\x1B[37m %p\n", as);
@@ -96,14 +96,14 @@ printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strdel]-");
 	printf("\x1B[32mFree:\x1B[37m %p\n", (as));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strdel]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strdel]-");
 	char	s[] = "Hello, I'm a string";
 	printf("\x1B[32mString:\x1B[37m %s\n", s);
 	ft_strclr(s);
 	printf("\x1B[32mStrings are equal:\x1B[37m %d\n", ft_memcmp(s, "\0\0\0", 4));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_striter]-");	
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_striter]-");	
 	char ss[] = "012345";
 	printf("\x1B[32mOriginal string:\x1B[37m %s\n", ss);
 	printf("\x1B[32mFunction = ascii char + 1:\x1B[37m %s\n", " *c = *c + 1");
@@ -112,7 +112,7 @@ printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_striter]-");
 	printf("\x1B[32mStrings are equal:\x1B[37m %d\n", ft_strcmp(ss, "123456"));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_striteri]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_striteri]-");
 	char s_s[] = "0123456";
 	printf("\x1B[32mOriginal string:\x1B[37m %s\n", s_s);
 	printf("\x1B[32mFunction = ascii char + index:\x1B[37m %s\n", " *s = *s + i");
@@ -121,7 +121,7 @@ printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_striteri]-");
 	printf("\x1B[32mStrings are equal:\x1B[37m %d\n", ft_strcmp(s_s, "02468:<"));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strmap]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strmap]-");
 	char *st;
 	st = "012345";
 	printf("\x1B[32mOriginal string:\x1B[37m %s\n", st);
@@ -131,7 +131,7 @@ printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strmap]-");
 	printf("\x1B[32mStrings are equal:\x1B[37m %d\n", ft_strcmp(st, "123456"));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strmapi]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strmapi]-");
 	char *str;
 	str = "0123456";
 	printf("\x1B[32mOriginal string:\x1B[37m %s\n", str);
@@ -141,46 +141,76 @@ printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strmapi]-");
 	printf("\x1B[32mStrings are equal:\x1B[37m %d\n", ft_strcmp(str, "02468:<"));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strequ]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strequ]-");
 	printf("\x1B[32mStrings are equal:\x1B[37m %d\n", ft_strequ("hello", "hello"));
 	printf("\x1B[32mStrings are not equal:\x1B[37m %d\n", ft_strequ("helloO", "helloA"));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strnequ]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strnequ]-");
 	printf("\x1B[32mStrings are equal:\x1B[37m %d\n", ft_strnequ("helloO", "helloA", 5));
 	printf("\x1B[32mStrings are not equal:\x1B[37m %d\n", ft_strnequ("helloO", "helloA", 6));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strsub]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strsub]-");
 	printf("\x1B[32mOriginal string:\x1B[37m %s\n", "How are you doing?");
 	printf("\x1B[32mSubstring fails:\x1B[37m %s\n", ft_strsub("", 0, 0));
 	printf("\x1B[32mSubstring is:\x1B[37m %s\n", ft_strsub("How are you doing?", 4, 9));
 	printf("\x1B[32mSubstring fails:\x1B[37m %s\n", ft_strsub("How are you doing?", 35, 4));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strjoin]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strjoin]-");
 	printf("\x1B[32mString 1:\x1B[37m %s\t \x1B[32mString 2:\x1B[37m %s\n", "01234", "56789");
 	printf("\x1B[32mConcatenated strings:\x1B[37m %s\n", ft_strjoin("01234", "56789"));
 	printf("\x1B[32mConcatenated strings:\x1B[37m %s\n", ft_strjoin("", ""));
 
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strtrim]-");
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strtrim]-");
 	printf("\x1B[32mString:\x1B[37m%s\n", "\"\\t_\\nHello I'm\\ta string\\n_\"");
 	printf("\x1B[32mWithout whitespaces:\x1B[37m%s\n", ft_strtrim("\t \nHello I'm\ta string!\n "));
-*/
 
-printf("\n\x1B[33m%s\x1B[37m\n", "-[ft_strsplit]-");
+
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_strsplit]-");
 	int ii = 0;
 	char **split;
-	char str[] = "*hello*fellow***students*";
-	split = ft_strsplit(str, '*');
+	char string[] = "*hello*fellow***students*";
+	split = ft_strsplit(string, '*');
 	while (split[ii])
 	{
 		printf("%s\n", split[ii]);
 		ii++;
 	}
 
-	
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_itoa]-");
+	int	n = -328900; 
+	printf("\x1B[32mft_itoa: \x1B[37mint = %d\t str = %s\n", n, ft_itoa(n));
+
+
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_putndel]-");
+	ft_putendl("Hello, everyone!");
+
+
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_putchar_fd]-");
+	printf("\x1B[32mFile Descriptor = 1:\x1B[37m\n  ");
+	ft_putchar_fd('p', 1);
+	printf("\n");
+
+
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_putstr_fd]-");
+	printf("\x1B[32mFile Descriptor = 1:\x1B[37m\n");
+	ft_putstr_fd("Hello, everyone!", 1);
+	printf("\n");
+
+
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_putendl_fd]-");
+	printf("\x1B[32mFile Descriptor = 1:\x1B[37m\n");
+	ft_putendl_fd("Hello, everyone!", 1);
+	printf("\n");
+
+
+printf("\n\n\x1B[33m%s\x1B[37m\n", "-[ft_putnbr_fd]-");
+	printf("\x1B[32mFile Descriptor = 1:\x1B[37m\n");
+	ft_putnbr_fd(-121324, 1);
+	printf("\n");
 
 	return (0);
 }
