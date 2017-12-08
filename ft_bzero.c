@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 14:51:57 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/02 18:02:45 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/08 19:50:18 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_bzero(void *s, size_t n)
 	size_t i;
 
 	i = 0;
-	while ((((char *)s)[i]) && (i < n))
+	while ((i < n) && (((char *)s)[i]))
 	{
 		((char *)s)[i] = 0;
 		i++;

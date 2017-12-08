@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 18:01:16 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/04 19:28:10 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/08 22:51:33 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,5 @@
 
 void	ft_putnbr(int n)
 {
-	unsigned int	nb;
-
-	nb = n;
-	if (n < 0)
-	{
-		nb = nb * -1;
-		ft_putchar('-');
-	}
-	if (nb / 10 > 0)
-	{
-		ft_putnbr(nb / 10);
-	}
-	ft_putchar(nb % 10 + '0');
+	ft_putnbr_fd(n, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 16:34:49 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/06 18:27:42 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/07 16:56:51 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static size_t	tab_end_char(char const *s)
 	size_t	i;
 	size_t	end;
 
-	i = strlen(s) - 1;
+	i = ft_strlen(s) - 1;
 	while ((i > 0) && (s[i] == '\t' || s[i] == '\n' || s[i] == ' '))
 	{
 		i--;
