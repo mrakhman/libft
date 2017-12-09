@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 21:05:09 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/04 21:09:38 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/09 17:14:21 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_strdel(char **as)
 {
+	if (!as)
+		return ;
 	free(*as);
 	*as = NULL;
 }

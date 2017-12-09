@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 20:17:10 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/05 20:56:27 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/09 17:24:02 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int		ft_strequ(char const *s1, char const *s2)
 	size_t	i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (0);
 	while (*s1 && *s2 && *s1 == *s2)
 	{
 		s1++;

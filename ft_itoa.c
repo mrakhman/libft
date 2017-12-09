@@ -6,13 +6,13 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 12:38:51 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/07 14:40:33 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/09 18:30:05 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_len(int n, size_t *sign)
+static int	count_len(int n, int *sign)
 {
 	unsigned int	nb;
 	size_t			len;
@@ -38,9 +38,9 @@ char		*ft_itoa(int n)
 {
 	unsigned int	nb;
 	char			*str;
-	size_t			k;
+	long			k;
 	size_t			len;
-	size_t			sign;
+	int				sign;
 
 	len = count_len(n, &sign);
 	nb = n;

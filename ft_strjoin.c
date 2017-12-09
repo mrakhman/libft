@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 16:04:14 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/06 18:28:20 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/09 18:48:00 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	k = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	tab = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!tab)
 		return (NULL);
 	while (s1[i] != '\0')
-	{
-		tab[k] = s1[i];
-		k++;
-		i++;
-	}
+		tab[k++] = s1[i++];
 	while (s2[j] != '\0')
-	{
-		tab[k] = s2[j];
-		k++;
-		j++;
-	}
+		tab[k++] = s2[j++];
 	tab[k] = '\0';
 	return (tab);
 }

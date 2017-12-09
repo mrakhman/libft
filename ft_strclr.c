@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 21:15:06 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/07 16:56:30 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/09 17:14:55 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_strclr(char *s)
 {
+	if (!s)
+		return ;
 	ft_bzero(s, ft_strlen(s));
 }

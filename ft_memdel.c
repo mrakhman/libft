@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 20:13:12 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/04 20:23:03 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/09 17:13:25 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_memdel(void **ap)
 {
+	if (!ap)
+		return ;
 	free(*ap);
 	*ap = NULL;
 }

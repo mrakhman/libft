@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 19:58:15 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/06 18:32:04 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/09 17:22:04 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*tab;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	tab = ft_strnew(ft_strlen(s));
 	if (!tab)
 		return (NULL);

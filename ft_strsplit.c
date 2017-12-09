@@ -6,11 +6,12 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 19:08:44 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/07 12:59:38 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/09 18:18:32 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#define IF_NOT(x) if (!(x)) return (0)
 
 static size_t	word_nb(char const *s, char c)
 {
@@ -19,6 +20,8 @@ static size_t	word_nb(char const *s, char c)
 
 	i = 0;
 	len = 0;
+	if (!s)
+		return (0);
 	if (s[0] != c)
 		len++;
 	while (s[i])
@@ -35,6 +38,8 @@ static size_t	word_len(char const *s, char c, int i)
 	size_t	len_w;
 
 	len_w = 0;
+	if (!s)
+		return (0);
 	while (s[i] && s[i] != c)
 	{
 		len_w++;
@@ -52,16 +57,16 @@ char			**ft_strsplit(char const *s, char c)
 
 	k = 0;
 	i = 0;
-	tab = (char **)malloc(sizeof(char*) * word_nb(s, c) + 1);
-	if (!tab)
-		return (NULL);
+	IF_NOT(s);
+	IF_NOT(tab = (char **)malloc(sizeof(char*) * word_nb(s, c) + 1));
 	while (s[k])
 	{
 		while (s[k] && s[k] == c)
 			k++;
-		tab[i] = (char *)malloc(sizeof(char) * (word_len(s, c, k) + 1));
-		if (!tab)
-			return (NULL);
+		if (!s[k])
+			break ;
+		IF_NOT((tab[i] = (char *)malloc(sizeof(char) *
+			(word_len(s, c, k) + 1))));
 		j = 0;
 		while (s[k] && s[k] != c)
 			tab[i][j++] = s[k++];

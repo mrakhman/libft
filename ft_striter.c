@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 21:41:18 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/04 22:01:27 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/09 19:42:57 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ void	ft_striter(char *s, void (*f)(char *))
 	size_t	i;
 
 	i = 0;
+	if (!s || !f)
+		return ;
 	while (s[i] != '\0')
 	{
-		f(&s[i]);
+		f(s + i);
 		i++;
 	}
 }
