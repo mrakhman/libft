@@ -6,7 +6,7 @@
 #    By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/30 19:03:50 by mrakhman          #+#    #+#              #
-#    Updated: 2017/12/07 15:56:32 by mrakhman         ###   ########.fr        #
+#    Updated: 2017/12/11 19:49:24 by mrakhman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,9 @@ ft_putchar_fd \
 ft_putstr_fd \
 ft_putendl_fd \
 ft_putnbr_fd \
+ft_lstnew \
+ft_lstdel \
+ft_lstdelone \
 
 FLAGS = -Wall -Wextra -Werror -I.
 
