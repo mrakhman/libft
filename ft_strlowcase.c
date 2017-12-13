@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mrakhman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/01 16:22:44 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/13 18:23:43 by mrakhman         ###   ########.fr       */
+/*   Created: 2017/07/18 14:30:06 by mrakhman          #+#    #+#             */
+/*   Updated: 2017/07/18 14:33:47 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strlowcase(char *str)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	while (i < n)
+	while (str[i] != '\0')
 	{
-		((char *)dst)[i] = ((char *)src)[i];
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] = str[i] + 32;
 		i++;
 	}
-	return ((char *)dst);
+	return (str);
 }

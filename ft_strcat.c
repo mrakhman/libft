@@ -6,13 +6,13 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/02 20:17:30 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/08 21:17:10 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/13 18:23:58 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	size_t	i;
 	size_t	j;

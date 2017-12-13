@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/01 16:22:44 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/13 18:23:43 by mrakhman         ###   ########.fr       */
+/*   Created: 2017/12/12 19:19:09 by mrakhman          #+#    #+#             */
+/*   Updated: 2017/12/13 19:28:09 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	size_t i;
+	t_list	*tmp;
 
-	i = 0;
-	while (i < n)
-	{
-		((char *)dst)[i] = ((char *)src)[i];
-		i++;
-	}
-	return ((char *)dst);
+	if (!lst || !f)
+		return (NULL);
+	tmp = f(lst);
+	tmp->next = ft_lstmap(lst->next, f);
+	return (tmp);
 }

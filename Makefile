@@ -6,7 +6,7 @@
 #    By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/30 19:03:50 by mrakhman          #+#    #+#              #
-#    Updated: 2017/12/11 19:49:24 by mrakhman         ###   ########.fr        #
+#    Updated: 2017/12/13 20:04:40 by mrakhman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,8 +66,16 @@ ft_putstr_fd \
 ft_putendl_fd \
 ft_putnbr_fd \
 ft_lstnew \
-ft_lstdel \
 ft_lstdelone \
+ft_lstdel \
+ft_lstadd \
+ft_lstiter \
+ft_lstmap \
+ft_is_odd \
+ft_is_even \
+ft_strlowcase \
+ft_strupcase \
+ft_strcapitalize
 
 FLAGS = -Wall -Wextra -Werror -I.
 

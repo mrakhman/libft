@@ -6,12 +6,11 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 15:38:00 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/09 20:37:15 by mrakhman         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:43:13 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define INT_MAX __INT_MAX__
-#define INT_MIN (-__INT_MAX__  -1)
+#include "libft.h"
 
 static int	nb_return(long long nb)
 {
@@ -33,7 +32,7 @@ int			ft_atoi(const char *str)
 		str++;
 	if (*str == '+')
 		str++;
-	if (*str == '-')
+	else if (*str == '-')
 	{
 		negat = -1;
 		str++;

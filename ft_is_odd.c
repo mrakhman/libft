@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_is_odd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mrakhman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/01 16:22:44 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/13 18:23:43 by mrakhman         ###   ########.fr       */
+/*   Created: 2017/12/13 19:50:32 by mrakhman          #+#    #+#             */
+/*   Updated: 2017/12/13 19:56:17 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+_Bool	ft_is_odd(int nb)
 {
-	size_t i;
-
-	i = 0;
-	while (i < n)
-	{
-		((char *)dst)[i] = ((char *)src)[i];
-		i++;
-	}
-	return ((char *)dst);
+	if (nb % 2 == 0)
+		return (0);
+	return (1);
 }
