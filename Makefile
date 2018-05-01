@@ -6,7 +6,7 @@
 #    By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/30 19:03:50 by mrakhman          #+#    #+#              #
-#    Updated: 2017/12/13 20:04:40 by mrakhman         ###   ########.fr        #
+#    Updated: 2018/05/01 16:56:55 by mrakhman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,8 @@ ft_is_odd \
 ft_is_even \
 ft_strlowcase \
 ft_strupcase \
-ft_strcapitalize
+ft_strcapitalize \
+ft_get_next_line
 
 FLAGS = -Wall -Wextra -Werror -I.
 

@@ -6,7 +6,7 @@
 /*   By: mrakhman <mrakhman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 15:46:22 by mrakhman          #+#    #+#             */
-/*   Updated: 2017/12/13 20:04:43 by mrakhman         ###   ########.fr       */
+/*   Updated: 2018/05/01 17:03:12 by mrakhman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # include <unistd.h>
 # define INT_MAX __INT_MAX__
 # define INT_MIN (-__INT_MAX__  -1)
+# define BUFF_SIZE 1
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 
 typedef struct		s_list
 {
@@ -90,5 +94,6 @@ _Bool				ft_is_even(int nb);
 char				*ft_strlowcase(char *str);
 char				*ft_strupcase(char *str);
 char				*ft_strcapitalize(char *str);
+int					get_next_line(const int fd, char **line);
 
 #endif
